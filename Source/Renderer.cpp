@@ -39,7 +39,7 @@ Renderer::Renderer()
             &heap_properties,
             D3D12_HEAP_FLAG_NONE,
             &buffer_desc,
-            D3D12_RESOURCE_STATE_COPY_DEST, // Start in copy destination state
+            D3D12_RESOURCE_STATE_COMMON, // Start in copy destination state
             nullptr,
             IID_PPV_ARGS(&index_buffer_));
         index_buffer_->SetName(L"Index Buffer Resource Heap");
@@ -87,7 +87,7 @@ Renderer::Renderer()
             &heap_properties,
             D3D12_HEAP_FLAG_NONE,
             &buffer_desc,
-            D3D12_RESOURCE_STATE_COPY_DEST, // Start in copy destination state
+            D3D12_RESOURCE_STATE_COMMON, // Start in copy destination state
             nullptr,
             IID_PPV_ARGS(&vertex_pos_buffer_));
         vertex_pos_buffer_->SetName(L"Vertex Pos Buffer");
@@ -146,7 +146,7 @@ Renderer::Renderer()
             &heap_properties,
             D3D12_HEAP_FLAG_NONE,
             &buffer_desc,
-            D3D12_RESOURCE_STATE_COPY_DEST, // Start in copy destination state
+            D3D12_RESOURCE_STATE_COMMON, // Start in copy destination state
             nullptr,
             IID_PPV_ARGS(&vertex_uv_buffer_));
         vertex_uv_buffer_->SetName(L"Vertex UV Buffer");
